@@ -52,7 +52,6 @@ public class CartTests {
     @Test(priority = 2, description = " add a book to the cart")
     public void addBookToCart() {
         bookPage = homePage.goToBookPage();
-        ScreenshotUtils.takeScreenshot(driver, "beforeChange.png");
         bookPage.addProductToCart( 1);
 
     }

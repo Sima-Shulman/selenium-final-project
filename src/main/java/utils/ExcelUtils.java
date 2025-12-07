@@ -34,7 +34,7 @@ public class ExcelUtils {
         summaryRow.createCell(0).setCellValue("Summary:");
         summaryRow.createCell(1).setCellValue(summary);
 
-        try (FileOutputStream file = new FileOutputStream("cart_output.xlsx")) {
+        try (FileOutputStream file = new FileOutputStream("excel_output/cart_output.xlsx")) {
             workbook.write(file);
         } catch (IOException e) {
             e.printStackTrace();

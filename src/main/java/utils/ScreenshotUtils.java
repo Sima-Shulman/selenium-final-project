@@ -13,7 +13,7 @@ public class ScreenshotUtils {
     public static void takeScreenshot(WebDriver driver, String fileName) {
         File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         try {
-            Files.copy(srcFile.toPath(), Paths.get(fileName));
+            Files.copy(srcFile.toPath(), Paths.get("screenshots", fileName));
         } catch (IOException e) {
             e.printStackTrace();
         }
